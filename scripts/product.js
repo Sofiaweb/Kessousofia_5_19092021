@@ -2,7 +2,9 @@
 let params = new URL(document.location).searchParams;
 let id = params.get("id");
 // Sélection des différents blocs de la vue html
-const productCardImg = document.querySelector(".img");
+
+window.addEventListener('load',function(){
+  const productCardImg = document.querySelector(".img");
 const productCardName = document.querySelector(".product-card__infos__title");
 const pageTitle = document.querySelector(".page_title");
 const productCardDescription = document.querySelector(
@@ -13,7 +15,8 @@ const itemQuantityber = document.querySelector("#itemQuantity");
 const colorSelect = document.querySelector("#color-select");
 
 
-main();
+  main();
+
 
 function main() {
   checkIf404();
@@ -117,3 +120,6 @@ function addToCart() {
     }
   });
 }
+
+
+})
