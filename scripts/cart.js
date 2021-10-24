@@ -2,14 +2,18 @@
 let cart = document.querySelector(".cart__item");
 let copyOfLS = JSON.parse(localStorage.getItem("products"));
 
-main();
+window.addEventListener('load',function(){
+  console.log(copyOfLS)
+  console.log('toutes les ressources sont charger lancons script')
+  main();
+})
 
-function main() {
-  displayCart();
-  countTotalInCart();
-  toEmptyCart();
-  checkFormAndPostRequest();
-}
+// function main() {
+//   displayCart();
+//   countTotalInCart();
+//   toEmptyCart();
+//   checkFormAndPostRequest();
+// }
 
 function displayCart() {
   let test = document.querySelector(".cart__item__content__settings__delete");
